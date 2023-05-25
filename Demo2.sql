@@ -19,4 +19,12 @@ create table PersonsBackup as select * from Persons;
 commit;
 desc PersonsBackup;
 
+insert into Persons(personId, personanme, address,city)
+values(100, "Mobin Arshad", "Rahmat Nagar", "Salempur");
+
+select * from Persons;
+
+ALTER table Persons
+RENAME COLUMN address to LOCAL_ADDRESS;
+
 
