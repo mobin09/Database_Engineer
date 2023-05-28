@@ -27,4 +27,24 @@ select * from Persons;
 ALTER table Persons
 RENAME COLUMN address to LOCAL_ADDRESS;
 
+use databaseengineers;
+create table Laptops(
+  serialNo int NOT NULL,
+  companyname varchar(255) NOT NULL,
+  size int NOT NULL,
+  price int NOT NULL,
+  color varchar(255),
+  reviewedby varchar(255)
+);
+
+desc Laptops;
+ALTER TABLE Laptops 
+MODIFY reviewedby varchar(255) NOT NULL;
+
+desc Laptops;
+
+
+
+
+
 
