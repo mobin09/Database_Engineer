@@ -19,7 +19,7 @@ create table PersonsBackup as select * from Persons;
 commit;
 desc PersonsBackup;
 
-insert into Persons(personId, personanme, address,city)
+insert into Persons(personId, personanme, local_address,city)
 values(100, "Mobin Arshad", "Rahmat Nagar", "Salempur");
 
 select * from Persons;
@@ -42,7 +42,16 @@ ALTER TABLE Laptops
 MODIFY reviewedby varchar(255) NOT NULL;
 
 desc Laptops;
-
+use databaseengineers;
+CREATE TABLE students
+(id int, name varchar(100), course varchar(50), address varchar(255) );
+insert into students(id, name, course, address)
+values(101, "Mobin Arshad", "B-tech", "Rahmat Nagar"),
+	(102, "Nitin Kumar", "B-tech", "Gajipur"),
+    (103, "Mohit Kumar", "B-tech", "New Delhi"),
+    (104, "Aman Alam", "B-tech", "Gajipur");
+show columns from students;
+select * from students;
 
 
 
