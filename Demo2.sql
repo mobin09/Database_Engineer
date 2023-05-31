@@ -53,6 +53,12 @@ values(101, "Mobin Arshad", "B-tech", "Rahmat Nagar"),
 show columns from students;
 select * from students;
 
+insert into students(id, name, course, address)
+value(106, "Angad Yadav", "B-tech", "Kanpur UP");
+select * from students;
+
+
+
 
 
 
