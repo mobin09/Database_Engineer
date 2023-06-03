@@ -57,6 +57,19 @@ insert into students(id, name, course, address)
 value(106, "Angad Yadav", "B-tech", "Kanpur UP");
 select * from students;
 
+CREATE DATABASE bookstore;
+use bookstore;
+
+CREATE TABLE customers(
+     customerID int auto_increment,
+     customerName varchar(255) NOT NULL,
+     customerNumber int NOT NULL,
+     customerAddress varchar(255)
+     );
+
+
+
+
 
 
 
