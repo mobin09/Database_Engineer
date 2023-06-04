@@ -61,11 +61,47 @@ CREATE DATABASE bookstore;
 use bookstore;
 
 CREATE TABLE customers(
-     customerID int auto_increment,
+     customerID int NOT NULL auto_increment,
      customerName varchar(255) NOT NULL,
      customerNumber int NOT NULL,
-     customerAddress varchar(255)
+     customerAddress varchar(255),
+     primary key(customerID)
      );
+
+show columns from customers;
+alter table customers
+add cGender varchar(10);
+
+show columns from customers;
+alter table customers
+add( country varchar(50), nationality varchar(70));
+
+Alter table customers
+drop column nationality;
+
+show columns from customers;
+select * from customers;
+
+alter table customers
+MODIFY column customernumber varchar(13) not null;
+commit;
+
+insert into customers 
+(customerName, customernumber, customerAddress, cGender, country) 
+values
+("Javed", "88xxxxxxx", "Barely", "M", "India"),
+("Anuj Kumar", "6786012345", "Barely", "M", "India");
+
+select * from customers;
+
+update customers set customerName = "Mohit Kumar Singh", 
+customerAddress = "New Delhi Dwarka" 
+where customerID = 2;
+commit;
+
+
+
+
 
 
 
