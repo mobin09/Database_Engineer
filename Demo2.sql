@@ -99,8 +99,17 @@ customerAddress = "New Delhi Dwarka"
 where customerID = 2;
 commit;
 
+create table CustomerDetails(
+    id int not null auto_increment,
+    name varchar(255) not null,
+    dob date,
+    primary key(id)
+);
 
-
+show columns from customerDetails;
+desc customerDetails;
+select * from customerDetails;
+commit;
 
 
 
