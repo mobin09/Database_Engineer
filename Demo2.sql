@@ -110,6 +110,66 @@ show columns from customerDetails;
 desc customerDetails;
 select * from customerDetails;
 commit;
+use bookstore;
+create table students(
+id int not null auto_increment,
+sname varchar(255) not null,
+sdob date not null,
+saddress varchar(255) not null,
+primary key(id)
+);
+
+alter table students
+ADD (profilePic BLOB, resume longtext);
+commit;
+
+desc students;
+select * from students;
+select 5 +5;
+select 5-5;
+select 5 * 5;
+select 5 / 5;
+select 5 % 5;
+
+create table employee (
+id int not null auto_increment,
+name varchar(255) not null,
+salary int not null,
+primary key(id) 
+);
+
+insert into employee( name, salary) values
+('alex', 25000),
+('john', 55000),
+('James', 52000),
+('Sam', 30000),
+('Hodi', 18000),
+('Kiran', 18000),
+('Wat', 24000),
+('Kiati', 2400);
+
+select * from employee;
+select * from employee where salary != 18000;
+select * from employee where salary <> 18000;
+
+use bookstore;
+select * from employee order by name asc;
+select * from employee order by salary desc;
+insert into employee (name, salary) values('john', 56000);
+select * from employee order by name asc, salary desc;
+
+
+
+
+
+
+
+
+ 
+
+
+
+
 
 
 
