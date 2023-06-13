@@ -158,6 +158,74 @@ select * from employee order by salary desc;
 insert into employee (name, salary) values('john', 56000);
 select * from employee order by name asc, salary desc;
 
+-- CREATING THE SCEMEA OF SHOPING CART
+
+CREATE database shoping_cart_db;
+use shoping_cart_db;
+create table customers(
+  customer_id int not null,
+  name varchar(100),
+  address varchar(255),
+  email varchar(50),
+  phone varchar(10),
+  primary key(customer_id)
+  );
+
+create table Products(
+  product_id int not null,
+  name varchar(100),
+  price NUMERIC(8, 2),
+  description varchar(255),
+  primary key(product_id)
+  );
+  
+create table cart_order(
+  orderId int not null,
+  product_id int not null,
+  customer_id int not null,
+  quantity int,
+  orderDate date,
+  status varchar(100),
+  primary key(orderId),
+  foreign key (customer_id) references customers(customer_id),
+  foreign key (product_id) references Products(product_id)
+); 
+
+use bookstore;
+select * from students;
+desc students;
+
+alter table students
+MODIFY resume BLOB;
+
+select * from students;
+
+use bookstore;
+
+create table users(
+ id int not null auto_increment,
+ username varchar(20) not null,
+ password varchar(20) not null,
+ primary key(id)
+ );
+ insert into users (username, password) values
+ ( 'Mobin', 'abcd123'),
+ ('Nitin', 'Nitin123');
+ 
+ select * from users;
+ SELECT count(*) FROM users where username = 'Mobin' AND  password = 'abcd123';
+ SELECT count(*) FROM users where username ='Mobin'-- 'AND  password ='sdnmsbfnmds'
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+  
+
 
 
 
