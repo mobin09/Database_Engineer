@@ -214,7 +214,29 @@ create table users(
  
  select * from users;
  SELECT count(*) FROM users where username = 'Mobin' AND  password = 'abcd123';
- SELECT count(*) FROM users where username ='Mobin'-- 'AND  password ='sdnmsbfnmds'
+ SELECT count(*) FROM users where username ='Mobin';-- 'AND  password ='sdnmsbfnmds';
+ 
+ use bookstore;
+ select * from users;
+ 
+ use bookstore;
+ CREATE TABLE products(
+    id int not null,
+    productNaame varchar(50) not null,
+    price double not null,
+    quantity int not null
+ );
+ desc products;
+ 
+ insert into products values
+ (1, "Milk", 35, 2),
+ (2, "Bread", 20, 2),
+ (3, "Suger", 50, 1),
+ (4, "Banana", 60, 12);
+ 
+ select * from products;
+ -- SELECT id, productNaame, price, quantity from products where product id = ?;
+ 
  
  
  
