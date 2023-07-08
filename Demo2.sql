@@ -236,6 +236,26 @@ create table users(
  
  select * from products;
  -- SELECT id, productNaame, price, quantity from products where product id = ?;
+ CALL GET_PRODUCT_DETAILS(1, @name, @price, @qnty);
+ select @name, @price, @qnty;
+ 
+SHOW GRANTS FOR 'root'@'localhost';
+GRANT SELECT ON bookstore.products TO 'root'@'localhost';
+
+SHOW GRANTS FOR 'root'@'localhost';
+
+select name into ename from employee where id = eid;
+
+desc employee;
+select * from employee;
+
+use bookstore;
+select * from employee;
+
+
+
+ 
+ 
  
  
  
