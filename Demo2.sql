@@ -251,9 +251,37 @@ select * from employee;
 
 use bookstore;
 select * from employee;
+use bookstore;
 
+CREATE TABLE ACC_DETAILS(
+   ACC_NO int not null,
+   NAME varchar(100) not null,
+   TOTAL_BAL decimal not null,
+   primary key(ACC_NO)
+);
 
-
+CREATE TABLE TRNS_DETAILS(
+  ACC_NO INT NOT NULL,
+  RECEIVED_AMOUNT_FROM INT NOT NULL,
+  AMOUNT_RECEIVED DECIMAL,
+  FOREIGN KEY(ACC_NO) REFERENCES ACC_DETAILS(ACC_NO)
+ );
+ 
+ insert into TRNS_DETAILS values 
+ (786, 123, 500.0); 
+ select * from TRNS_DETAILS;
+ 
+ 
+ insert into acc_details values
+ (123,'Mobin Arshad', 50000.0),
+ (420, 'Nitin Kumar', 40000.0),
+ (786, 'Washim Arshad', 1000000.0),
+ (245, 'Mohit Kumar', 200000000.0);
+ 
+ select * from acc_details;
+ SELECT NAME, TOTAL_BAL FROM ACC_NO WHERE ACC_NO = 123; 
+ 
+ 
  
  
  
